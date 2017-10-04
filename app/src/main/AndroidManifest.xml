@@ -17,15 +17,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".ReminderActivity" />
-        <activity
-            android:name=".ScrollingActivity"
-            android:label="@string/title_activity_scrolling"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".tp"
-            android:label="@string/title_activity_tp"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".NewReminder"></activity>
+        <activity android:name=".TimetableActivity" />
+        <activity android:name=".NewReminder" />
+        <activity android:name=".page" />
+
+        <!--<service android:name=".notification.ScheduleService" />
+        <service android:name=".notification.NotifyService" />-->
     </application>
 
 </manifest>

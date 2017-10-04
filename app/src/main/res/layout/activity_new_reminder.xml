@@ -102,6 +102,7 @@
         android:layout_marginBottom="80dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
+        android:onClick="getData"
         android:text="Set Reminder"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"

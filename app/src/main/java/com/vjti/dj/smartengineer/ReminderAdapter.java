@@ -10,6 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Jayant on 02-10-2017.
@@ -17,7 +18,7 @@ import java.util.ArrayList;
 
 public class ReminderAdapter  extends ArrayAdapter<Reminder> implements View.OnClickListener{
 
-    private ArrayList<Reminder> dataSet;
+    private List<Reminder> dataSet;
     Context mContext;
 
     private static class ViewHolder {
@@ -26,7 +27,7 @@ public class ReminderAdapter  extends ArrayAdapter<Reminder> implements View.OnC
         ImageView info;
     }
 
-    public ReminderAdapter(ArrayList<Reminder> data, Context context) {
+    public ReminderAdapter(List<Reminder> data, Context context) {
         super(context, R.layout.list_reminder, data);
         this.dataSet = data;
         this.mContext=context;

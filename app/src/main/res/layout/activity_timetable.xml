@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_timetable"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.vjti.dj.smartengineer.TimetableActivity">
+    <Button
+        android:text="MONDAY"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Monday"
+        android:onClick="monday"/>
+    <Button
+        android:text="TUESDAY"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Tuesday"
+        android:layout_below="@+id/Monday"
+        android:onClick="tuesday"/>
+
+    <Button
+        android:text="WEDNESDAY"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Wednesday"
+        android:layout_below="@+id/Tuesday"
+        android:onClick="wednesday"/>
+    <Button
+        android:text="THURSDAY"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Thursday"
+        android:layout_below="@+id/Wednesday"
+        android:onClick="thursday"/>
+
+    <Button
+        android:text="FRIDAY"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Friday"
+        android:layout_below="@+id/Thursday"
+        android:onClick="friday"/>
+    <Button
+    android:text="SATURDAY"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/Saturday"
+    android:layout_below="@+id/Friday"
+        android:onClick="saturday"/>
+
+
+</RelativeLayout>

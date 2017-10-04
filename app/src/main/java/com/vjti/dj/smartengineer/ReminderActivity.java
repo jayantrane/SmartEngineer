@@ -11,10 +11,11 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ReminderActivity extends AppCompatActivity {
     private ReminderAdapter adapter;
-    private ArrayList<Reminder> myDataset;
+    private List<Reminder> reminderList;
     private ListView listView;
 
 
@@ -24,23 +25,28 @@ public class ReminderActivity extends AppCompatActivity {
         setContentView(R.layout.acitivity_reminders);
 
 
+/*
         myDataset = new ArrayList<>();
         myDataset.add(new Reminder("Jayant" ,"26/9/2017"));
         myDataset.add(new Reminder("Devangi" ,"26/9/2017"));
         myDataset.add(new Reminder("Barak" ,"26/9/2017"));
         myDataset.add(new Reminder("Mark" ,"26/9/2017"));
+*/
+
+        DatabaseHandler databaseHandler = new DatabaseHandler(this);
 
 
+        reminderList = databaseHandler.findAll();
         listView=(ListView)findViewById(R.id.list_item);
 
-        adapter= new ReminderAdapter(myDataset,getApplicationContext());
+        adapter= new ReminderAdapter(reminderList,getApplicationContext());
 
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                Reminder reminder= myDataset.get(position);
+                Reminder reminder= reminderList.get(position);
 
                 Toast.makeText(ReminderActivity.this,reminder.getName()+" item clicked",Toast.LENGTH_SHORT).show();
             }
